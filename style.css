@@ -1,0 +1,948 @@
+/*Importar la fuente 'Spartan' desde Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*Configurar el comportamiento de desplazamiento sueve para todo el documento*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Establecer el estilo global para todos los elementos: 
+elimina margen y rellen, utiliza box-sizing para incluir el relleno y el borde en el tamaño total del elemento,
+y aplica la fuente 'Spartan'*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+/*Estilo para los títulos de nivel 1 */
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+/*Estilo para los títulos de nivel 2*/
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+/*Estilos para los títulos de nivel 4*/
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+/*Estilo para los títulos de nivel 6*/
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/*Estilo para los parrafos*/
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+/*Clase para secciones con un padding específico*/
+.section-p1 {
+    padding: 40px 80px;
+}
+
+/*Clase para secciones con un margen específico*/
+.section-m1 {
+    margin: 40px 0;
+}
+
+/*Estilo para botones de clase 'normal'*/
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+/*Estilos para botones de clase 'white'*/
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+/*Estilo para el cuerpo del documento*/
+body {
+    width: 100%;
+}
+
+/* Clase Header */
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/*Estilo para la barra de navegación*/
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Estilo para los elementos de la lista de la barra de navegación*/
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+/*Estilo para los enlaces de la barra de navegación*/
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+/*Estilo para el estado hover y activo de los enlaces de la barra de navegación*/
+#navbar li a :hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+/*Estilo adicional para el estado hover y activo de los enlaces de la barra de navegación*/
+#navbar li a.active::after,
+#navbar li a :hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/*Estilo para el botón de menú móvil*/
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+/*Estilo para el botón de cerrar menú movil*/
+#close {
+    display: none;
+}
+
+/*Pagina de Inicio */
+
+#hero {
+    background-image: url("img/mochila.png");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*Estilo para el título de nivel 4 dentro de la seccion de Inicio clase hero*/
+#hero h4 {
+    padding-bottom: 15px;
+}
+
+/*Estilo para el titulo de nivel 1 dentro de la seccion de la clase hero*/
+#hero h1 {
+    color: #088178;
+}
+
+/*Estilo para el botón dentro de la seccion de la clase hero*/
+#hero button {
+    background-image: url(img/button.png);
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/*Estilo para la sección de características*/
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*Estilo para cada caja de características*/
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+/*Estilo para el estado hover de cada caja de características*/
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+/*Estilo para las imágenes dentro de las cajas de características*/
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*Estilo para el título de nivel 6 dentro de las cajas de características*/
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+/*Estilo para la segunda caja de características*/
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #cdebbc;
+}
+
+/*Estilo para la tercera caja de caracteristicas*/
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+
+/*Estilo para la cuarta caja de caracteristicas*/
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+
+/*Estilo para la quinta caja de caracteristicas*/
+#feature .fe-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+
+/*Estilo para la sexta caja de caracteristicas*/
+#feature .fe-box:nth-child(6) h6 {
+    background-color: #fff2e5;
+}
+
+/*Estila para la sección de productos*/
+#product1 {
+    text-align: center;
+}
+
+/*Estilo para el contenedor de productos*/
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+/*Estilo para cada producto*/
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+/*Estilo para el estado hover de cada producto*/
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+/*Estilo para las imagenes dentro de cada producto*/
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/*Estilo para la descripción dentro de cada producto*/
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+/*Estilo para el texto de la descripción dentro de cada producto*/
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+/*Estilo para el titulo de nivel 5 dentro de la descripción de cada producto*/
+#product1 .pro h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+/*Estilo para la calificación dentro de la descripción de cada producto*/
+#product1 .pro .des i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+/*Estilo para el precio dentro de la descripción de cada producto*/
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+/*Estilo para la calificación dentro de la descripción de cada producto*/
+#product1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+/*Estilo para las imagenes dentro de la sección de banner*/
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/banner/b2.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Estilos del banner titulo nivel 4*/
+#banner h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+/*Estilos del banner titulo nivel 2*/
+#banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+/*Estilo para el span dentro del titulo nivel 2 del banner*/
+#banner h2 span {
+    color: #ef3636;
+}
+
+/*Estilos para el boton del banner al pasar el raton*/
+#banner button:hover {
+    background-color: #088178;
+    color: #fff;
+}
+
+/*Estilos para el apartado de subcripción*/
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(img/banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+
+/*Estilos para el titulo de nivel 4 de el apartado de subcripción*/
+#newsletter h4 {
+    grid-column-start: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/*Estilos para el parrafo del apartado de subcripción*/
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+/*Estilo para el texto de el apartado de subcripción*/
+#newsletter p span {
+    color: #ffbd27;
+}
+
+/*Caracteristicas de Formulario del apartado de subcripción*/
+#newsletter .form {
+    display: flex;
+    width: 40%;
+}
+
+/*Caracteristicas del input del formulario*/
+#newsletter input {
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*Estilos para el boton de el apartado de subcripción*/
+#newsletter button {
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/*Estilo para el footer */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #E3E6F3;
+    padding: 20px;
+}
+
+/*Estilos para la clase col del footer*/
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+
+/*Estilos del logo*/
+footer .logo {
+    margin-bottom: 30px;
+}
+
+/*Estilos del titulo de nivel 4 del footer*/
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+/*Estilos del parrafo del footer*/
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+/*Estilos del hipervinculo del footer*/
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/*Estilos de los iconos de redes*/
+footer .follow i {
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+/*Estilo de imagen de metodos de pago*/
+footer .met img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+/*Margen de la imagen de metodos de pago*/
+footer .met img {
+    margin: 10px 0 15px 0;
+}
+
+/*Color del icono y texto al pasar el ratón*/
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/*Estilos del texto de copyright*/
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+/* Login/Register  */
+
+.auth-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/*Estilos de la caja*/
+.auth-box {
+    width: 440px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Estilos de el header de la caja*/
+.auth-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*Estilos para el encabezado de autentificación*/
+.auth-header header {
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/*Estilos para el campo de entrada*/
+.input-box .input-field {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: 0.3s;
+}
+
+/*Estilos para el marcador de posición*/
+::placeholder {
+    font-weight: 500;
+    color: #999;
+}
+
+/*Estilos para el campo de entrada enfocado*/
+.input-field:focus {
+    border-color: #007bff;
+}
+
+/*Estilos para la sección de olvido su contraseña*/
+.forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+/*Estilos para el checkbox*/
+#check {
+    margin-right: 10px;
+}
+
+/*Estilos para el enlace de contraseña*/
+.pass {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/*Subrayado al pasar el ratón*/
+.pass:hover {
+    text-decoration: underline;
+}
+
+/*Estilos para el botón de envío*/
+.input-submit {
+    width: 100%;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 60px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/*Estílos para el enlace de cambio (switch)*/
+.switch-link {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.switch-link a {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+/*Clase para ocultar elementos*/
+.hidden {
+    display: none;
+}
+
+/*Detalle de Producto */
+
+
+.product-detail-section {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-detail-image {
+    margin-bottom: 20px;
+}
+
+.product-detail-image img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.product-detail-description {
+    max-width: 600px;
+}
+
+.product-detail-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-detail-brand {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.product-detail-star-rating {
+    margin: 10px 0;
+}
+
+.product-detail-star-rating i {
+    color: #ff9800;
+}
+
+.product-detail-description h4 {
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.product-detail-description p {
+    margin-bottom: 20px;
+}
+
+button.product-detail-add-to-cart {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button.product-detail-add-to-cart:hover {
+    background-color: #e64a19;
+}
+
+
+
+
+/* Nosotro */
+
+/* Estilo para el contenedor de la sección */
+.about-section {
+    background-color: #E3E6F3;
+    /* Color de fondo */
+    padding: 30px;
+    /* Espacio interno */
+    border: 2px solid #D1D5DE;
+    /* Borde sólido */
+}
+
+/* Estilo para los títulos de sección */
+.about-section h2,
+.about-section h3 {
+    color: #333;
+    /* Color del texto */
+    margin-bottom: 10px;
+    /* Margen inferior */
+}
+
+/* Estilo para el contenido de la sección */
+.about-section p {
+    color: #555;
+    /* Color del texto */
+    margin-bottom: 20px;
+    /* Margen inferior */
+}
+
+/* Estilo para la línea divisoria */
+.about-section hr {
+    border-color: #D1D5DE;
+    /* Color de la línea */
+    margin-bottom: 20px;
+    /* Margen inferior */
+}
+
+
+
+/*Preguntas Frecuentes*/
+
+/* Estilo personalizado para los cuadros de preguntas */
+.faq-card {
+    background-color: #E3E6F3;
+    border: 1px solid #D1D5DE;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.faq-header {
+    cursor: pointer;
+}
+
+.btn-link {
+    font-weight: 700;
+    /* Negrita para el botón */
+}
+
+/*Contactos*/
+.contact-card {
+    background-color: #E3E6F3;
+    border: 1px solid #D1D5DE;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.contact-header {
+    font-weight: 700;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: #4267B2;
+    /* Color de Facebook */
+    margin-right: 10px;
+}
+
+.map-container {
+    height: 450px;
+}
+
+
+
+/* Star Media Query */
+
+@media (max-width:799px) {
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    #feature {
+        justify-content: center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 15px;
+    }
+
+    #newsletter .form {
+        width: 70%;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+}
+
+@media (max-width: 477px) {
+    #header {
+        padding: 10px 30px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    #hero {
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    #feature {
+        justify-content: space-between;
+    }
+
+    #feature .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+
+    #product1 .pro {
+        width: 100%;
+    }
+
+    #banner {
+        height: 40vh;
+    }
+
+    #newsletter {
+        padding: 40px 20px;
+    }
+
+    #newsletter .form {
+        width: 100%;
+    }
+
+    #footer .copyright {
+        text-align: start;
+    }
+}
